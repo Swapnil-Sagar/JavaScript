@@ -39,7 +39,8 @@ this == window (at global level).
 whenever we create global execution context "this" will be created. and at global level this will ponts to window.
 
 
-13.Global space:
+13.Global space: 
+
 
 var x = 10 {this is in global space}
 function a() {
