@@ -8,3 +8,5 @@ if (a === undefined) {
 } else {
   console.log("a is not undefined");
 }
+
+// never assign undefine like a = undefine..
