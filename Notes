@@ -71,7 +71,8 @@ we can put anything in variable in js not like other languages.
     Scope Chain is just chain of Lexical Environments and the Parent references
 
 18. let and const declarations are hoisted. (temporal dead zone)
-let variable initialized/declared and then logged to console | time between this is known as temporal dead zone
+    let variable initialized/declared and then logged to console | time between this is known as temporal dead zone
+    let variable are assigned in a separate memory space and is undefined but it has not been initialized. And untill it is initialized a value in code, that time is known as Temporal Dead Zone.
 
 
 19. When we try to access variable in temporal dead zone it will give us reference error.
@@ -80,18 +81,33 @@ let variable initialized/declared and then logged to console | time between this
 
 21. const is same as let but it is more strict.
 
+      In case of let you can declare it first and initialise a value later like:
+
+      let a;
+
+      a=10;
+      console.log(a); 
+      This wont throw an error but if we do same with const it will give syantax error.
+
+    So in const Declaration and initialization must be done in the same line like:
+
+      const b=100;
+
+      console.log(b);
+      This will Run fine.
+
 
 22. Errors:
             1. TypeError: redeclaration of const variable.
-            2. ReferenceError: when we try to access variable before initialization. | or variable which is not initialized.
+            2. ReferenceError: when we try to access variable before initialization. | or variable which is not initialized. (Temporal Dead Zone)
             3. SyntaxError: redeclaration of let.
-
+ 
 
 23. Block scope:
             1. block is also known as compound statement (we can combine multiple js statements in block)
             2. block is represented by {}
             3. we can use js block so that we can use that block later where js requires only one statement.
-            4. If we have same named variable outside the blcok then it is known as shadowing.
+            4. If we have same named variable outside the block then it is known as shadowing.
 
 
 24. Shadowing:
@@ -102,7 +118,7 @@ let variable initialized/declared and then logged to console | time between this
                         outside: const, inside block scope: const
                         outside: var, inside block scope: const
             
-            2. Not allowed:
+            2. Not allowed (illegal Shadowing):
                         outside: let, inside: var 
                         outside: const, inside: var 
 
