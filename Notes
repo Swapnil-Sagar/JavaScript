@@ -66,7 +66,9 @@ we can put anything in variable in js not like other languages.
 
 16. Scope is directly dependents on lexical environment.
 
-17. Lexical memory is local memory plus reference to lexical environment of parents.
+17. (Lexical means in Hierarchy.) Lexical memory is local memory plus reference to lexical environment of parents.
+    Global Execution context also has lexical reference which points to null.
+    Scope Chain is just chain of Lexical Environments and the Parent references
 
 18. let and const declarations are hoisted. (temporal dead zone)
 let variable initialized/declared and then logged to console | time between this is known as temporal dead zone
