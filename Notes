@@ -55,7 +55,7 @@ window.a == this.a == a (In global space)
 
 
 14. undefined is like placeholder for variables.
-          1. if memory is allocated the it will be undefined
+          1. if memory is allocated then it will be undefined
           2. and if variable is not declared in space whether global or function then it will be not defined.
           3. undefined is not empty it is placeholder.
 
