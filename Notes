@@ -158,6 +158,16 @@ we can put anything in variable in js not like other languages.
 
 
 33. Anonymous function: a function without name
+    Anonymous functions are used when functions are used as values, you can store anonymous functions to a values 
+
+    var b = function () {
+      console.log("b is called");
+      };
+    b();
+
+    ! - You can use anonymous functions only in functions Expressions and not in functions statements
+
+34. Difference between functions Statement and Function Expression is Hoisting
 
 
 34. Synchronous single-threaded: means js can do only one thig at a time.
@@ -172,7 +182,7 @@ due to callback functions we can use async functions.
 
 
  36. First class functions: 
-            1. ability of functions to be used as values and to be ppassed as arguments is known as first class functions.
+            1. ability of functions to be used as values and to be passed as arguments is known as first class functions.
             2. we can pass functions inside functions as an arguments.
 
 

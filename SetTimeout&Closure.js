@@ -30,6 +30,7 @@ function x() {
 x();
 
 // how to do it with var?? | we have to create closure:
+
 function x() {
   for (var i = 1; i <= 5; i++) {
     function close(x) {
