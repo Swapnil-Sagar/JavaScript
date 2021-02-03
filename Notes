@@ -126,7 +126,7 @@ we can put anything in variable in js not like other languages.
 25.  Closure:
             1. function bind together with lexical environment.
             2. function with its lexical scope. (function inside function).
-            3. function along witth its lexical scope bundle is a closure.
+            3. function along with its lexical scope bundle is a closure. <- Interview Answer
 
 
 26. We can pass function inside function.  x(function a(){})
@@ -135,10 +135,10 @@ we can put anything in variable in js not like other languages.
             x() instead of this we can do: return x;
 
 
-29. Uses of closure:
+29. Uses of Closure:
             1. Module design pattern.
             2. Currying.
-            3. Fuctions like once.
+            3. Functions like once.
             4. memoize.
             5. maintaining state in async world.
             6. setTimeouts
@@ -148,7 +148,7 @@ we can put anything in variable in js not like other languages.
 
 30. JS waits for none.
 
-31. setTimeout takes the function, attaches timer to it and store it somewhere.
+31. setTimeout() takes the function, attaches timer to it and store it somewhere.
 
 
 32. disadvantages of closure:
