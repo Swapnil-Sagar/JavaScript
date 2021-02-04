@@ -170,26 +170,26 @@ we can put anything in variable in js not like other languages.
 34. Difference between functions Statement and Function Expression is Hoisting
 
 
-34. Synchronous single-threaded: means js can do only one thig at a time.
+35. Synchronous single-threaded: means js can do only one thig at a time.
 due to callback functions we can use async functions.
 
 
-35. remove event listeners:
+36. remove event listeners:
  event listeners are heavy | takes lots of memory | uses closures | will be there in memory until event happens and after event happend | eg if click button is there event loistener will be active untill someone click that button and after that also | this will put a heavy load load on memory | hence we need remove event listeners.
 
  if we add remove event listeners all the event memory will be garbage collected.
 
 
 
- 36. First class functions: 
+ 37. First class functions: 
             1. ability of functions to be used as values and to be passed as arguments is known as first class functions.
             2. we can pass functions inside functions as an arguments.
 
 
-37. When function is invoked, execution context of function is created and pushed into the call stack.
+38. When function is invoked, execution context of function is created and pushed into the call stack.
 
 
-38. Call stack will execute things very quickly | it does not have timer.
+39. Call stack will execute things very quickly | it does not have timer.
 
 
 39. Browser >> JS engine >> Call stack >> execution context
@@ -213,6 +213,9 @@ due to callback functions we can use async functions.
             6. Location
             7. Many more
 These are not part of javascript | these are part of browser. | browser gives access to js engine to use these features.
+
+
+41. Since JavaScript is a synchronous language, we can use callback and setTimeout and WebApis to perform asynchronous tasks.
 
 42. window is global object | we can use above features of browser in js through a keyword known as window
 window.setTimeout
