@@ -173,29 +173,29 @@ we can put anything in variable in js not like other languages.
 35. Synchronous single-threaded: means js can do only one thig at a time.
 due to callback functions we can use async functions.
 
-41. Since JavaScript is a synchronous language, we can use  callback and setTimeout and WebApis to perform asynchronous tasks.
+36. Since JavaScript is a synchronous language, we can use  callback and setTimeout and WebApis to perform asynchronous tasks.
 
-36. remove event listeners:
+37. remove event listeners:
  event listeners are heavy | takes lots of memory | uses closures | will be there in memory until event happens and after event happend | eg if click button is there event loistener will be active untill someone click that button and after that also | this will put a heavy load load on memory | hence we need remove event listeners.
 
  if we add remove event listeners all the event memory will be garbage collected.
 
 
 
- 37. First class functions: 
+38. First class functions: 
             1. ability of functions to be used as values and to be passed as arguments is known as first class functions.
             2. we can pass functions inside functions as an arguments.
 
 
-38. When function is invoked, execution context of function is created and pushed into the call stack.
+389. When function is invoked, execution context of function is created and pushed into the call stack.
 
 
-39. Call stack will execute things very quickly | it does not have timer.
+40. Call stack will execute things very quickly | it does not have timer.
 
 
-39. Browser >> JS engine >> Call stack >> execution context
+41. Browser >> JS engine >> Call stack >> execution context
 
-40. Browser has: 
+42. Browser has: 
             1. Local Storage
             2. JS engine
             3. timer
@@ -206,7 +206,7 @@ due to callback functions we can use async functions.
             8. UI Display
 
 
-41. Web apis:
+43. Web apis:
             1. setTimeout()
             2. DOM apis
             3. fetch()
@@ -219,48 +219,49 @@ These are not part of javascript | these are part of browser. | browser gives ac
 
 
 
-42. window is global object | we can use above features of browser in js through a keyword known as window
-window.setTimeout
-window.localStorage
+44. window is global object | we can use above features of browser in js through a keyword known as window
 
-43. we dont use window.setTimeout coz setTimeout is available globally and we can access it as it is.
+  window.setTimeout
+  window.localStorage
 
-43 . Eventloop has a only job to continuously monitor Call Stack and the Callback Queue.
+45. we dont use window.setTimeout coz setTimeout is available globally and we can access it as it is.
 
-44. when timer expires callback function is pushed in callback queue | and event loop check if there anything in callback queue and push it into the execution context. | and call stack executes call back function.
+46 . Eventloop has a only job to continuously monitor Call Stack and the Callback Queue.
 
-47. Fetch() goes and requests API calls. It returns a promise. 
+47. when timer expires callback function is pushed in callback queue | and event loop check if there anything in callback queue and push it into the execution context. | and call stack executes call back function.
 
-45. microtask queue is similar to callback queue but has priority than callback queue | microtask queue will execute before callback queue.
+48. Fetch() goes and requests API calls. It returns a promise. 
 
-46. first all the code is executed | then event loop will check if execution context is empty or not, if it is empty them it will check for microtask queue and callback queue | if there are tasks waiting in microtask queue and callback queue | microtask queue will be executed first as it has high priority and then callback queue is executed.
+49. microtask queue is similar to callback queue but has priority than callback queue | microtask queue will execute before callback queue.
 
-47. Callback queue | task queue:
+50. first all the code is executed | then event loop will check if execution context is empty or not, if it is empty them it will check for microtask queue and callback queue | if there are tasks waiting in microtask queue and callback queue | microtask queue will be executed first as it has high priority and then callback queue is executed.
+
+51. Callback queue | task queue:
             1. DOM
             2. setTimeout etc
 
 
 
-48. Microtask queue:
+52. Microtask queue: 
             1. fetch()
             2. promises
             3. mutation observer
             4. etc
 
-49. Event loop , callback queues and microtask queues are part of the browser and not JS engine.
+53. Event loop , callback queues and microtask queues are part of the browser and not JS engine.
 
-50. All the callback functions
+54. All the callback functions
  which come throgh promises will go in microtask queue.
 
-51. Mutation observer:
+55. Mutation observer:
             keeps on checking if there is mutation in DOM tree | if there is mutation if will execute callback functions.
 
 
-52. Starvation of tasks inside callback queue:
+56. Starvation of tasks inside callback queue:
             if there is task inside microtask queue which will return another callback in microtask queue which returns another callback and so on | then there is a possibility that the tasks in callback queue will never get a chance to execute | this phenomenon is known as starvation of tasks in callback queue.
 
 
-53. working of web api's in short:
+57. working of web api's in short:
 
     - creation of global execution context => all the code is executed first (like console) => js engine checks whether there is any callback functions (web api's) => if there are callback queue tasks they will be moved in web api's environment => after some time interval (in case of setTimeout) they will go inside callback queue => event loop will wait until global execution context becomes empty => once GEC becomes empty it will check for tasks in callback queue and move them in GEC => then all tasks are executed.
 
@@ -268,3 +269,44 @@ window.localStorage
 
     - but if we have microtask queue and callback queue | microtask queue will be executed first
       microtask queue > callback queue 
+
+58.  JavaScript Runtime environment contains: (Every browser has it)
+          - JS Engine (Heart of JSRE)
+          - API
+          - Event loop
+          - Callback Queue
+          - Microtask Queue
+
+59. ECMAScript language standards are standards to be followed to create a JS Engine.
+
+60. JS code runs in multiple steps 
+      Code -> Parsing -> Compilation -> execution
+
+      In Parsing, codes is broken in Tokens :-  let a = 7 (4 tokens) 
+                  Syntax Parser - takes the code and covert it into an Abstract Syntax Tree (AST) - https://astexplorer.net/
+
+      In compilation, Just in Time (JIT) Compilation  - Intrepreter + Compiler
+                      Interpreter - Executes code line by line (FAST)
+                      Compiler - Whole code is compiled and a new code is formed which is the optimed version of the code and then compiled (Efficient)
+                      JS uses both (Depends on JSEngine)
+      
+      Compilation and Execution goes hand in hand this is why it is called Just in Time Compilation
+
+      Some JSengine has AOT (Ahead of Time) Compilation. 
+
+      Execution is not possible without Memory Head and Call Stack.
+                Memory heap is where all the memory is stored (variable and functions)
+
+                  There is also a Grabage Collectior - It uses "Mark and Sweep" algorithm to clean the memory heap by removing unwanted variable and functions and optimise the code.
+                It also has other optimisation techniques like:  InLining, Copy Elision , inline Caching (read it)
+
+61. Some JSEngines: 
+    Google - V8 (Interpreter - "Ignition", Compiler - "Turbofan", Grabage Collector - "Orinocco and Oilpan") 
+    Mozillafirefox - spidermonkey
+    Edge - chakra  
+
+62. Js can be used for functional Programming as well as object oriented programming.   
+
+63. Concurrency Model:
+    If setTimeout expires after 5sec and the Callback function is in callback queue. It won't be executed untill Call stack is empty.
+    If global execution context takes 10secs to execute. The setTimeout CB() will execute after 10sec even though the timer is of 5sec. 
