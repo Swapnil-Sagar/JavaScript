@@ -173,6 +173,7 @@ we can put anything in variable in js not like other languages.
 35. Synchronous single-threaded: means js can do only one thig at a time.
 due to callback functions we can use async functions.
 
+41. Since JavaScript is a synchronous language, we can use  callback and setTimeout and WebApis to perform asynchronous tasks.
 
 36. remove event listeners:
  event listeners are heavy | takes lots of memory | uses closures | will be there in memory until event happens and after event happend | eg if click button is there event loistener will be active untill someone click that button and after that also | this will put a heavy load load on memory | hence we need remove event listeners.
@@ -200,12 +201,13 @@ due to callback functions we can use async functions.
             3. timer
             4. URL
             5. Can make connection to server
-            6. Bluetooth
-            7. Geolocation
+            6. Bluetooth  access
+            7. Geolocation access
+            8. UI Display
 
 
 41. Web apis:
-            1. setTimeout
+            1. setTimeout()
             2. DOM apis
             3. fetch()
             4. local storage
@@ -215,7 +217,7 @@ due to callback functions we can use async functions.
 These are not part of javascript | these are part of browser. | browser gives access to js engine to use these features.
 
 
-41. Since JavaScript is a synchronous language, we can use callback and setTimeout and WebApis to perform asynchronous tasks.
+
 
 42. window is global object | we can use above features of browser in js through a keyword known as window
 window.setTimeout
@@ -223,15 +225,21 @@ window.localStorage
 
 43. we dont use window.setTimeout coz setTimeout is available globally and we can access it as it is.
 
+43 . Eventloop has a only job to continuously monitor Call Stack and the Callback Queue.
+
 44. when timer expires callback function is pushed in callback queue | and event loop check if there anything in callback queue and push it into the execution context. | and call stack executes call back function.
 
-45. microtask queue has priority than callback queue | microtask queue will execute before callback queue.
+47. Fetch() goes and requests API calls. It returns a promise. 
+
+45. microtask queue is similar to callback queue but has priority than callback queue | microtask queue will execute before callback queue.
 
 46. first all the code is executed | then event loop will check if execution context is empty or not, if it is empty them it will check for microtask queue and callback queue | if there are tasks waiting in microtask queue and callback queue | microtask queue will be executed first as it has high priority and then callback queue is executed.
 
 47. Callback queue | task queue:
             1. DOM
             2. setTimeout etc
+
+
 
 48. Microtask queue:
             1. fetch()
