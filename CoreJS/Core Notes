@@ -1,4 +1,18 @@
 1. Call Bind and Apply
-    In Call method we can pass the arguments individually coma separated.
-    In apply method we cac pass the arguments as array list.
-    Bind method is similar to call but does not directly calls the function instead it returns a copy stored in a varuable which can be invoked later
+
+    The call, bind and apply methods can be used to set the this keyword independent of how a function is called. 
+    The bind method creates a copy of the function and sets the this keyword, while the call and apply methods 
+    sets the this keyword and calls the function immediately.
+
+
+    - In Call method we can pass the arguments individually coma separated.
+    - In apply method we cac pass the arguments as array list.
+    - Bind method is similar to call but does not directly calls the function instead it returns a copy stored in a varuable which can be invoked later.
+
+2. Polyfill for bind is used when we need to implement our own bind method.
+
+3. Currying
+    Currying refers to the process of transforming a function with multiple arity into the same function with less arity. The curried effect is achieved 
+    by binding some of the arguments to the first function invoke, so that those values are fixed for the next invocation.
+
+    2 Ways to perform currying- using bind , using closures.
