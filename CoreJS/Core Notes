@@ -17,7 +17,14 @@
 
     2 Ways to perform currying- using bind , using closures. (See js file)
 
-4. Debouncing
+4. Debouncing and Throttling are used for optimization by limiting the rate of function calls.
+
+5. Debouncing
     The debounce() function forces a function to wait a certain amount of time before running again. The function is built to limit
      the number of times a function is called. ... The function aims to reduce overhead by preventing a function from being called 
      several times in succession.
+
+6. Throttling
+    Throttling is a technique in which, no matter how many times the user fires the event, the attached function will be executed 
+    only once in a given time interval. 
+
