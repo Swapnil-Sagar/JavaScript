@@ -15,4 +15,9 @@
     Currying refers to the process of transforming a function with multiple arity into the same function with less arity. The curried effect is achieved 
     by binding some of the arguments to the first function invoke, so that those values are fixed for the next invocation.
 
-    2 Ways to perform currying- using bind , using closures.
+    2 Ways to perform currying- using bind , using closures. (See js file)
+
+4. Debouncing
+    The debounce() function forces a function to wait a certain amount of time before running again. The function is built to limit
+     the number of times a function is called. ... The function aims to reduce overhead by preventing a function from being called 
+     several times in succession.
