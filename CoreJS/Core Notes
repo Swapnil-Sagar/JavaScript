@@ -28,3 +28,32 @@
     Throttling is a technique in which, no matter how many times the user fires the event, the attached function will be executed 
     only once in a given time interval. 
 
+7. Async & Defer 
+    These are boolean attributes which are used along with script tags to load the externam scripts efficiently
+    into the web page 
+
+    **In normal HTML parsing if the browser encounters a script tag, it will pause the HTML parsing and fetches the 
+        script after that it loads the script and once the script is loaded fully then it will continue to parse the HTML***
+
+   " With async, the file gets downloaded asynchronously and then executed as soon as it’s downloaded."
+    Here the browser will Parse the HTML and Fetches the script simultaneously, and once the script has been fetch
+    the browser pause the parsing, loads the script and then continue parsing  
+
+    "The defer attribute tells the browser not to wait for the script. Instead, the browser will continue to process the HTML, 
+    build DOM. The script loads “in the background”, and then runs when the DOM is fully built."
+    In simple words, here the browser will Parse the HTML from start to finish, and if it encounters a script, it will fetch it simultaneously 
+    and wait for HTML to parse and then loads the script.
+
+8. Difference between Async and Defer
+
+    - Async does not guarantee the order or script execution but defer does.
+        (don't use Async if the scripts are dependent on each other)
+
+    - Only use Async if you are loading external script like (google analytics, maps).
+
+    *Prefer Defer* 
+
+
+
+
+
