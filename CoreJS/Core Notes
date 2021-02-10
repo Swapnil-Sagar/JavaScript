@@ -60,6 +60,17 @@
     With bubbling, the event is first captured and handled by the innermost element and then propagated to outer elements.
     With capturing/trickling, the event is first captured by the outermost element and propagated to the inner elements.
     
+10. Event Delegation 
+        JavaScript event delegation is a simple technique by which you add a single event handler to a parent element in order to avoid having to add event handlers to multiple child elements.
+        It is based on event bubbling. 
+
+    Advantages 
+        - Saves Memory
+        - Writing less code
+        - DOM manipulation gets easies 
+    Limitation
+        - All events are not bubbleup like - blur, resizing, focus, scrolling, etc
+        - Stop propagation will not work
 
 
 

@@ -79,3 +79,20 @@ document.querySelector("#child").addEventListener(
 );
 
 //Event will stop at parent
+
+//Event Delegation 1
+
+document.querySelector("#categories").addEventListener("click", (e) => {
+  console.log(e.target.id); //logs the element id
+  if (e.target.tagName == "LI") {
+    window.location.href = "/" + e.target.id; //goes to location from parent
+  }
+});
+
+//Event Delegation 2
+document.querySelector("#form").addEventListener("keyup", (e) => {
+  console.log(e);
+  if (e.target.dataset.uppercase != undefined) {
+    e.target.value = e.target.value.toUpperCase();
+  }
+});
