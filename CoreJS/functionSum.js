@@ -1,6 +1,7 @@
 let sum1 = function (a) {
   return function (b) {
     if (b) {
+      //Check if 2nd argument has a value or not
       return sum1(a + b);
     }
     return a;

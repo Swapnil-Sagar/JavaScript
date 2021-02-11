@@ -72,8 +72,27 @@
         - All events are not bubbleup like - blur, resizing, focus, scrolling, etc
         - Stop propagation will not work
 
+11. Prototype
+        The prototype is an object that is associated with every functions and objects by default in JavaScript. Same is the case for functions.
+        In simple words whenever an object is being created JS Engine attaches some hidden (predefined) object to your created object like (.length, .push, .pop, etc)
+        All the hidden objects are stored in __proto__ . 
+        __proto__ is a historical getter/setter for [[Prototype]]
+
+    We can make our prototype function which can be accessabe by all other function using
+    Function.prototype..
+
+12. Prototype Chain
+     The arr.__proto__ is the Array.prototype 
+     and arr.__proto__.__proto__  is the Object.prototype
+     and arr.__proto__.__proto__.__proto__ is actually NULL ... This is Prototype Chain
+
+    So, Every object has a prototype, including the prototype object. This "chain" goes all the way back until it reaches an object that has no prototype, usually Object's prototype.
 
 
+
+13. Prototypal Inheritance
+    Where an object in inheriting properties and methods from the __proto__ which is pointing to another object.
+    object2.__proto__ = object;
 
 
 
