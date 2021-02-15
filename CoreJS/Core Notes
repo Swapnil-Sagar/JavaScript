@@ -95,5 +95,13 @@
     object2.__proto__ = object;
 
 
+14. Local Storage & Session Storage
+    Data in session storage only persists for a session.
+
+    LocalStorage is almost the same as the session storage but the major difference is that it does not have an expiry.
+    Due to security reasons it follows the same-origin policy. Same-Origin refers to the same Protocol, same host, and the same port.
+    For local Storage we use localStorage.setItem(key,value) to insert data in local storage and 
+    localStorage.getItem(key) to retrieve the data and localStorage.removeItem(key) to remove any item. Also we can use
+    localStorage.clear() to clear everything
 
 
