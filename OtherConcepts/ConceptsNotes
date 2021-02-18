@@ -10,3 +10,12 @@ A Promise has four states:
     - rejected: Action related to the promise failed
     - pending: Promise is still pending i.e not fulfilled or rejected yet
     - settled: Promise has fulfilled or rejected
+
+=> 
+    The handling of this is also different in arrow functions compared to regular functions.
+
+    In short, with arrow functions there are no binding of this.
+
+    In regular functions the this keyword represented the object that called the function, which could be the window, the document, a button or whatever.
+
+    With arrow functions the this keyword always represents the object that defined the arrow function.
