@@ -310,3 +310,11 @@ These are not part of javascript | these are part of browser. | browser gives ac
 63. Concurrency Model:
     If setTimeout expires after 5sec and the Callback function is in callback queue. It won't be executed untill Call stack is empty.
     If global execution context takes 10secs to execute. The setTimeout CB() will execute after 10sec even though the timer is of 5sec. 
+
+
+64. Highier Order Functions:
+    A function which takes another function as argumnet or returns a function is know as HOF.
+    And function which is sent as argument is known as callback function.
+
+65. Polyfill: 
+    A polyfill is a piece of code (usually JavaScript on the Web) used to provide modern functionality on older browsers that do not natively support it. (See HighierOrderFunction.js file)
