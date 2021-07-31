@@ -323,3 +323,6 @@ These are not part of javascript | these are part of browser. | browser gives ac
     MAP => perform any operaton on each value of array
     FILTER => finding out values from array based on a logic
     REDUCE => takes all values from the array and come up with a single value out of them
+      **Note -> When you need to return specific value in reduce then user function instead of arrow function
+
+    We can also do function chaining (combine map, filter and reduce) See MapFilterReduce.js file  
