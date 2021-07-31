@@ -318,3 +318,8 @@ These are not part of javascript | these are part of browser. | browser gives ac
 
 65. Polyfill: 
     A polyfill is a piece of code (usually JavaScript on the Web) used to provide modern functionality on older browsers that do not natively support it. (See HighierOrderFunction.js file)
+
+66. MAP FILTER AND REDUCE
+    MAP => perform any operaton on each value of array
+    FILTER => finding out values from array based on a logic
+    REDUCE => takes all values from the array and come up with a single value out of them
