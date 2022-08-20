@@ -1,0 +1,5 @@
+1. Callbacks are used to handle async operations in JS.
+
+   1.1. Issues of callbacks
+   a. Callback Hell - When multiple functions are used as callbacks inside one another. This will cause a 'pyramid of doom' like structure.
+   b. Inversion of control - When we looses the control of our functions and give it to another function.
