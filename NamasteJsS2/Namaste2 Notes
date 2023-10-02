@@ -4,7 +4,7 @@
    a. Callback Hell - When multiple functions are used as callbacks inside one another. This will cause a 'pyramid of doom' like structure.
    b. Inversion of control - When we looses the control of our functions and give it to another function.
 
-2. Promises - it is an object representing the eventual completion or failure of an asynchronous operation.
+2. Promises- it is an object representing the eventual completion or failure of an asynchronous operation.
 
    2.1. Promise data are immutable.
    2.2. Promise has 3 states - Pending, Fulfilled and Rejected.
