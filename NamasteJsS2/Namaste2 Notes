@@ -9,3 +9,4 @@
    2.1. Promise data are immutable.
    2.2. Promise has 3 states - Pending, Fulfilled and Rejected.
    2.3. Promise chaining helps resolve callback hell.
+   2.4 Whenever use promise chaining, always return the value you want to pass to the next chain (see code)
